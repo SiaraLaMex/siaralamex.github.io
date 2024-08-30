@@ -1,4 +1,10 @@
-// Ejemplo de JavaScript para interactividad simple
+// script.js
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.querySelector('h1');
+    heading.textContent = 'JavaScript está funcionando';
+    heading.style.color = 'blue';
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('nav ul li a');

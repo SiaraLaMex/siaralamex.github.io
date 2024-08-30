@@ -2,7 +2,7 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
     const heading = document.querySelector('h1');
-    heading.textContent = 'JavaScript está funcionando';
+    heading.textContent = 'JavaScript estaa funcionando';
     heading.style.color = 'blue';
 });
 

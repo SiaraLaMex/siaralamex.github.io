@@ -1,4 +1,12 @@
-/* Hacer que el header sea transparente y superpuesto sobre la imagen de fondo */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #e6e6fa; /* Fondo lila para toda la página */
+}
+
 header {
     position: absolute;
     top: 0;
@@ -8,14 +16,54 @@ header {
     padding: 10px 0;
     color: #fff;
     text-align: center;
+    background-color: transparent; /* Header transparente */
 }
 
-/* Configurar la primera sección para que la imagen cubra también el header */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#language-selector {
+    margin-top: 10px;
+}
+
+#language-selector button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#language-selector button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
 #seccion1 {
-    background-image: url('Cielo.jpg');
+    background-image: url('Cielo.jpg'); /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Ocupa toda la ventana */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,31 +71,20 @@ header {
     text-align: center;
     color: white;
     position: relative;
-    margin-top: -50px; /* Para compensar el espacio ocupado por el header */
-    padding-top: 50px; /* Para ajustar el contenido dentro de la sección */
+    padding-top: 60px; /* Espacio para el header */
+    margin-top: 0;
 }
 
-/* Otros estilos permanecen igual */
-body {
-    background-color: #DDA0DD;
+h1, h2 {
+    color: #333;
 }
 
-/* Estilos para el selector de idioma */
-.language-selector {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-.language-selector button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 14px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.language-selector button:hover {
-    text-decoration: underline;
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

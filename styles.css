@@ -3,13 +3,17 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #F7EAFF;
 }
 
 header {
-    background-color: #333;
+    background-color: transparent;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -32,25 +36,34 @@ main {
     background-color: #f4f4f4;
 }
 
-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-footer {
-    background-color: #333;
+nav ul li a {
     color: #fff;
+    text-decoration: none;
+}
+
+/* Configurar la primera sección con un fondo de imagen */
+#seccion1 {
+    background-image: url('cielo.jpg');
+    background-size: cover; /* Hacer que la imagen cubra toda la sección */
+    background-position: center; /* Centrar la imagen */
+    height: 100vh; /* Hacer que la sección ocupe toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    color: white; /* Color del texto */
+    position: relative;
+}
+
+/* Añadir sombra al texto para mejor legibilidad */
+#seccion1 h1, #seccion1 p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Asegurar que otras secciones no se vean afectadas */
+#seccion2, #seccion3 {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-top: 0;
 }

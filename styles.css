@@ -42,7 +42,7 @@ nav ul li a {
 
 /* Configurar la primera sección con un fondo de imagen */
 #seccion1 {
-    background-image: url('cielo.jpg');
+    background-image: url('Cielo.jpg');
     background-size: cover; /* Hacer que la imagen cubra toda la sección */
     background-position: center; /* Centrar la imagen */
     height: 100vh; /* Hacer que la sección ocupe toda la altura de la ventana */

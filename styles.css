@@ -1,69 +1,53 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #F7EAFF;
-}
-
+/* Hacer que el header sea transparente y superpuesto sobre la imagen de fondo */
 header {
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
+    padding: 10px 0;
     color: #fff;
-    text-decoration: none;
+    text-align: center;
 }
 
-main {
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Configurar la primera sección con un fondo de imagen */
+/* Configurar la primera sección para que la imagen cubra también el header */
 #seccion1 {
-    background-image: url('Cielo.jpg');
-    background-size: cover; /* Hacer que la imagen cubra toda la sección */
-    background-position: center; /* Centrar la imagen */
-    height: 100vh; /* Hacer que la sección ocupe toda la altura de la ventana */
+    background-image: url('images/mi-imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ocupa toda la ventana */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; /* Color del texto */
+    color: white;
     position: relative;
+    margin-top: -50px; /* Para compensar el espacio ocupado por el header */
+    padding-top: 50px; /* Para ajustar el contenido dentro de la sección */
 }
 
-/* Añadir sombra al texto para mejor legibilidad */
-#seccion1 h1, #seccion1 p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+/* Otros estilos permanecen igual */
+body {
+    background-color: #DDA0DD;
 }
 
-/* Asegurar que otras secciones no se vean afectadas */
-#seccion2, #seccion3 {
-    padding: 40px 20px;
-    background-color: #fff;
-    margin-top: 0;
-    text-align: center;
+/* Estilos para el selector de idioma */
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.language-selector button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-selector button:hover {
+    text-decoration: underline;
 }

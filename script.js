@@ -1,24 +1,9 @@
-// script.js
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const heading = document.querySelector('h1');
-    heading.textContent = 'Este es un nuevo titulo';
-    heading.style.color = 'blue';
-});
+function changeLanguage(language) {
+    // Selecciona todos los elementos con la clase "text" o "nav-text"
+    const elements = document.querySelectorAll('.text, .nav-text');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav ul li a');
-
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 50, // Ajuste de desplazamiento
-                behavior: 'smooth'
-            });
-        });
+    elements.forEach(element => {
+        // Cambia el texto según el idioma seleccionado
+        element.textContent = element.getAttribute('data-' + language);
     });
-});
+}
